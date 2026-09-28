@@ -20,7 +20,6 @@ services:
       - "8000:8000"
     volumes:
       - ./vector_store:/app/vector_store
-      - ./rag_assistant.db:/app/rag_assistant.db
       - ./data:/app/data
       - C:/Users/Lenovo/.cache/huggingface:/root/.cache/huggingface
 
@@ -32,7 +31,5 @@ services:
     restart: always
     depends_on:
       - backend
-    environment:
-      - API_BASE_URL=http://backend:8000
     ports:
-      - "8501:8501"
+      - "5173:80"

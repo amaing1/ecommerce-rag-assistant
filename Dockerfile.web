@@ -1,13 +1,13 @@
-FROM python:3.9-slim
-
+# ---- 阶段 1：构建 Vue 前端（node 环境里 npm install + build 出 dist）----
+FROM node:22-alpine AS build
 WORKDIR /app
+COPY frontend/package.json frontend/package-lock.json ./
+RUN npm install
+COPY frontend/ .
+RUN npm run build
 
-COPY requirements.txt .
-
-RUN pip install --no-cache-dir -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
-
-COPY . .
-
-EXPOSE 8501
-
-CMD ["streamlit", "run", "web/app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+# ---- 阶段 2：用 nginx 伺服构建产物（静态文件 + SPA 路由）----
+FROM nginx:alpine
+COPY --from=build /app/dist /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+EXPOSE 80
