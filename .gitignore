@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# 虚拟环境
+venv/
+.venv/
+env/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 项目敏感文件
+.env
+*.db
+*.sqlite3
+logs/
+*.log
+.DS_Store
+vector_store/
+
+# 数据目录：爬取的商品参数/价格快照、售后政策等，属于"内容"而非代码
+# 含小米商城数据，公开上传有版权/合规风险 —— 不进 Git，仅本地运行用
+data/

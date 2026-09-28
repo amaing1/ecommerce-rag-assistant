@@ -1,0 +1,277 @@
+{
+  "meta": {
+    "name": "小米商城 RAG 客服黄金测试集",
+    "version": "2.0",
+    "total": 38,
+    "created": "2026-08-28",
+    "说明": "基于真实小米商城知识库(mi.com爬取)出题。每题含标准答案(reference_answer)与期望工具(expect_tool: rag/order/after_sales)"
+  },
+  "items": [
+    {
+      "id": "Q001",
+      "question": "Xiaomi 14 Pro 的价格是多少？",
+      "category": "商品库",
+      "reference_answer": "5099 元。",
+      "expect_tool": "product"
+    },
+    {
+      "id": "Q002",
+      "question": "REDMI K80 多少钱？",
+      "category": "商品库",
+      "reference_answer": "1999 元（市场价 2299 元）。",
+      "expect_tool": "product"
+    },
+    {
+      "id": "Q003",
+      "question": "Xiaomi 14 多少钱？",
+      "category": "商品库",
+      "reference_answer": "3999 元。",
+      "expect_tool": "product"
+    },
+    {
+      "id": "Q004",
+      "question": "REDMI 15R 5G 多少钱？",
+      "category": "商品库",
+      "reference_answer": "1099 元。",
+      "expect_tool": "product"
+    },
+    {
+      "id": "Q005",
+      "question": "Xiaomi 15 多少钱？",
+      "category": "商品库",
+      "reference_answer": "3599 元。",
+      "expect_tool": "product"
+    },
+    {
+      "id": "Q006",
+      "question": "Xiaomi 13 Ultra 多少钱？",
+      "category": "商品库",
+      "reference_answer": "5899 元。",
+      "expect_tool": "product"
+    },
+    {
+      "id": "Q007",
+      "question": "Xiaomi 17 Pro Max 多少钱？",
+      "category": "商品库",
+      "reference_answer": "6999 元。",
+      "expect_tool": "product"
+    },
+    {
+      "id": "Q008",
+      "question": "REDMI K100 Pro 多少钱？",
+      "category": "商品库",
+      "reference_answer": "3999 元。",
+      "expect_tool": "product"
+    },
+    {
+      "id": "Q009",
+      "question": "Redmi 14C 多少钱？",
+      "category": "商品库",
+      "reference_answer": "799 元。",
+      "expect_tool": "product"
+    },
+    {
+      "id": "Q010",
+      "question": "REDMI Pad 2 多少钱？",
+      "category": "商品库",
+      "reference_answer": "1399 元。",
+      "expect_tool": "product"
+    },
+    {
+      "id": "Q011",
+      "question": "Xiaomi Pad 7 多少钱？",
+      "category": "商品库",
+      "reference_answer": "2299 元。",
+      "expect_tool": "product"
+    },
+    {
+      "id": "Q012",
+      "question": "Xiaomi Pad 8 多少钱？",
+      "category": "商品库",
+      "reference_answer": "2799 元。",
+      "expect_tool": "product"
+    },
+    {
+      "id": "Q013",
+      "question": "REDMI 15R 5G 的电池容量是多少？",
+      "category": "商品库",
+      "reference_answer": "6000mAh。",
+      "expect_tool": "rag"
+    },
+    {
+      "id": "Q014",
+      "question": "REDMI K80 的电池容量是多少？",
+      "category": "商品库",
+      "reference_answer": "6550mAh。",
+      "expect_tool": "rag"
+    },
+    {
+      "id": "Q015",
+      "question": "Xiaomi 14 的电池容量是多少？",
+      "category": "商品库",
+      "reference_answer": "4610mAh。",
+      "expect_tool": "rag"
+    },
+    {
+      "id": "Q016",
+      "question": "Xiaomi 14 的屏幕尺寸是多少？",
+      "category": "商品库",
+      "reference_answer": "6.36 英寸 OLED 屏。",
+      "expect_tool": "rag"
+    },
+    {
+      "id": "Q017",
+      "question": "REDMI K80 的屏幕尺寸是多少？",
+      "category": "商品库",
+      "reference_answer": "6.67 英寸 OLED 屏。",
+      "expect_tool": "rag"
+    },
+    {
+      "id": "Q018",
+      "question": "REDMI 15R 5G 的屏幕尺寸是多少？",
+      "category": "商品库",
+      "reference_answer": "6.9 英寸 LCD 高刷护眼屏。",
+      "expect_tool": "rag"
+    },
+    {
+      "id": "Q019",
+      "question": "Xiaomi 14 支持多少瓦快充？",
+      "category": "商品库",
+      "reference_answer": "有线快充 90W，无线快充 50W。",
+      "expect_tool": "rag"
+    },
+    {
+      "id": "Q020",
+      "question": "Xiaomi 14 的前置摄像头是多少像素？",
+      "category": "商品库",
+      "reference_answer": "3200 万像素。",
+      "expect_tool": "rag"
+    },
+    {
+      "id": "Q021",
+      "question": "我的订单 XM20260815001 到哪了？",
+      "category": "订单工具",
+      "reference_answer": "状态运输中，由顺丰速运承运，预计 2026-08-18 前送达。",
+      "expect_tool": "order"
+    },
+    {
+      "id": "Q022",
+      "question": "XM20260800002 的包裹签收了吗？",
+      "category": "订单工具",
+      "reference_answer": "已签收，中通快递，2026-08-04 15:40 签收。",
+      "expect_tool": "order"
+    },
+    {
+      "id": "Q023",
+      "question": "XM20260800003 发货了吗？",
+      "category": "订单工具",
+      "reference_answer": "待发货，订单已支付等待商家发货，预计 48 小时内发货。",
+      "expect_tool": "order"
+    },
+    {
+      "id": "Q024",
+      "question": "XM20260815001 是用什么快递发的？",
+      "category": "订单工具",
+      "reference_answer": "顺丰速运，物流单号 SF1357902468642。",
+      "expect_tool": "order"
+    },
+    {
+      "id": "Q025",
+      "question": "我的快递到哪了？",
+      "category": "订单工具",
+      "reference_answer": "应礼貌引导用户提供订单号（格式如 XM20260815001），而不是直接回答订单状态。",
+      "expect_tool": "order"
+    },
+    {
+      "id": "Q026",
+      "question": "帮我查一下订单的物流",
+      "category": "订单工具",
+      "reference_answer": "应礼貌引导用户提供订单号（格式如 XM20260815001），而不是直接回答订单状态。",
+      "expect_tool": "order"
+    },
+    {
+      "id": "Q027",
+      "question": "SH20260815001 退款到哪一步了？",
+      "category": "售后工具",
+      "reference_answer": "退款中，仓库已签收商品，预计 3 个工作日内原路退回。",
+      "expect_tool": "after_sales"
+    },
+    {
+      "id": "Q028",
+      "question": "SH20260805002 换货完成了吗？",
+      "category": "售后工具",
+      "reference_answer": "已完成，2026-08-10 换货完成并已签收。",
+      "expect_tool": "after_sales"
+    },
+    {
+      "id": "Q029",
+      "question": "SH20260810003 维修审核通过了吗？",
+      "category": "售后工具",
+      "reference_answer": "待审核，已提交维修申请等待审核，预计 24 小时内审核。",
+      "expect_tool": "after_sales"
+    },
+    {
+      "id": "Q030",
+      "question": "SH20260815001 是什么类型的售后？",
+      "category": "售后工具",
+      "reference_answer": "退货退款，关联订单 XM20260815001。",
+      "expect_tool": "after_sales"
+    },
+    {
+      "id": "Q031",
+      "question": "我的退款到账了吗？",
+      "category": "售后工具",
+      "reference_answer": "应礼貌引导用户提供售后单号（格式如 SH20260815001），而不是直接回答退款状态。",
+      "expect_tool": "after_sales"
+    },
+    {
+      "id": "Q032",
+      "question": "我买的手机要退货，进度怎么样了？",
+      "category": "售后工具",
+      "reference_answer": "应礼貌引导用户提供售后单号（格式如 SH20260815001），而不是直接回答退货进度。",
+      "expect_tool": "after_sales"
+    },
+    {
+      "id": "Q033",
+      "question": "你们支持7天无理由退货吗？",
+      "category": "路由挑战",
+      "reference_answer": "支持，7 天无理由退货、15 天免费换货。",
+      "expect_tool": "rag"
+    },
+    {
+      "id": "Q034",
+      "question": "订单满69元能包邮吗？",
+      "category": "路由挑战",
+      "reference_answer": "能，满 69 元包邮。",
+      "expect_tool": "rag"
+    },
+    {
+      "id": "Q035",
+      "question": "小米手机支持15天免费换货吗？",
+      "category": "路由挑战",
+      "reference_answer": "支持，15 天免费换货。",
+      "expect_tool": "rag"
+    },
+    {
+      "id": "Q036",
+      "question": "发货满多少钱包邮？",
+      "category": "路由挑战",
+      "reference_answer": "满 69 元包邮。",
+      "expect_tool": "rag"
+    },
+    {
+      "id": "Q037",
+      "question": "无理由退货的期限是几天？",
+      "category": "路由挑战",
+      "reference_answer": "7 天无理由退货。",
+      "expect_tool": "rag"
+    },
+    {
+      "id": "Q038",
+      "question": "免费换货的服务是几天？",
+      "category": "路由挑战",
+      "reference_answer": "15 天免费换货。",
+      "expect_tool": "rag"
+    }
+  ]
+}
