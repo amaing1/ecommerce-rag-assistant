@@ -10,6 +10,15 @@ COPY requirements.txt .
 # 第4行：安装依赖（清华源加速；--no-cache-dir 不缓存，减小镜像体积）
 RUN pip install --no-cache-dir -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 
+# 换 Debian 国内源（playwright --with-deps 要用 apt 装系统依赖，官方源国内极慢，先换成阿里云）
+RUN sed -i 's|deb.debian.org|mirrors.aliyun.com|g' /etc/apt/sources.list.d/debian.sources 2>/dev/null; \
+    sed -i 's|deb.debian.org|mirrors.aliyun.com|g' /etc/apt/sources.list 2>/dev/null; \
+    true
+
+# 价格爬虫用 Playwright 无头浏览器，需额外下载 Chromium 浏览器程序（--with-deps 顺便装系统依赖）
+ENV PLAYWRIGHT_DOWNLOAD_HOST=https://cdn.npmmirror.com/binaries/playwright
+RUN playwright install --with-deps chromium
+
 # 第5行：复制全部代码进容器
 COPY . .
 

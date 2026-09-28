@@ -16,9 +16,9 @@ _llm = ChatOpenAI(
     temperature=0,
 )
 
-# ===== 连接 Redis（企业里这些从配置/环境变量读，这里先写死方便跑通）=====
-REDIS_HOST = "localhost"
-REDIS_PORT = 6379
+# 连接 Redis：默认 localhost（裸机开发），Docker 里通过环境变量 REDIS_HOST=redis 指向 redis 容器
+REDIS_HOST = os.getenv("REDIS_HOST", "localhost")
+REDIS_PORT = int(os.getenv("REDIS_PORT", "6379"))
 REDIS_DB = 0
 
 # 项目根：用于降级时读 data/api_details.json

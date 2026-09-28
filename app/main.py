@@ -29,7 +29,7 @@ def _redis_price_is_fresh() -> bool:
     """检查 Redis 价格是否 4 天内刷过：看 hash 的 TTL（刚刷完 TTL≈7天）"""
     try:
         import redis
-        r = redis.Redis(host="localhost", port=6379, db=0, decode_responses=True)
+        r = redis.Redis(host=os.getenv("REDIS_HOST", "localhost"), port=int(os.getenv("REDIS_PORT", "6379")), db=0, decode_responses=True)
         ttl = r.ttl("product:price")
         if ttl and ttl > 0:
             return ttl > TTL_FRESH_THRESHOLD

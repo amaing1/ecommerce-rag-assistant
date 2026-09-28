@@ -16,6 +16,7 @@ services:
       - .env
     environment:
       - HF_ENDPOINT=https://hf-mirror.com
+      - REDIS_HOST=redis
     ports:
       - "8000:8000"
     volumes:

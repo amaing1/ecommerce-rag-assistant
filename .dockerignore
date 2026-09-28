@@ -1,0 +1,23 @@
+# Git
+.git
+.gitignore
+
+# 敏感文件（不进镜像，运行时由 env_file 注入）
+.env
+*.db
+*.sqlite3
+
+# 运行时数据（运行时从宿主机 volume 挂载）
+vector_store/
+data/
+logs/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 前端（node_modules 巨大，必须排除）
+frontend/node_modules/
+frontend/dist/

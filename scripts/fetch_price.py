@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 PRICE_FILE = os.path.join(DATA_DIR, "api_details.json")
 # ===== Redis 连接（和 product_service.py 保持一致）=====
-_r = redis.Redis(host="localhost", port=6379, db=0, decode_responses=True)
+_r = redis.Redis(host=os.getenv("REDIS_HOST", "localhost"), port=int(os.getenv("REDIS_PORT", "6379")), db=0, decode_responses=True)
 PRICE_HASH_KEY = "product:price"
 TTL_SECONDS = 7 * 24 * 3600        # 7 天（> 4~5 天刷新周期，不会中途过期）
 
