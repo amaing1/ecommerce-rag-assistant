@@ -49,36 +49,3 @@ async def validate_file(file: UploadFile) -> None:
         raise HTTPException(status_code=400, detail="上传的文件为空")
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

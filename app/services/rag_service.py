@@ -477,36 +477,3 @@ class RAGService:
                 db.close()
         except Exception as e:
             print(f"[监控] 写入日志失败(不影响主流程): {e}")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -125,25 +125,3 @@ def query_price(question: str):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
